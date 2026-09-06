@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-import Home from '../pages/Home'; 
+import Home from '../pages/index'; 
 import AdainAnimatedText from './AdainAnimatedText';
 
 const AdainSplashScreen = () => {

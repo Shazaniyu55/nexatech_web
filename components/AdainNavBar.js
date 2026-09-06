@@ -79,7 +79,7 @@ function AdainNavBar() {
               <div className="space-x-4 text-lg">
                 <ul className="mb-4 mt-2 items-center pr-20 font-medium text-sm justify-center space-y-4 md:flex md:space-x-4 md:space-y-0">
                   <li className={`text-nexablack hover:text-nexawhite pr-16 ${activeNavItem === 'home' ? 'active' : ''}`}>
-                    <Link href="/Home" onClick={() => handleClick('home')}>
+                    <Link href="/" onClick={() => handleClick('home')}>
                       Home
                     </Link>
                   </li>

@@ -1,4 +1,5 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const AdainFooter = () => {
   return (
@@ -12,22 +13,22 @@ const AdainFooter = () => {
             <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
             <ul className="flex gap-6 mb-4">
               <li>
-                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" target="_blank" rel="noopener noreferrer" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaFacebook size={28} />
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" target="_blank" rel="noopener noreferrer" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaInstagram size={28} />
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" target="_blank" rel="noopener noreferrer" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaTwitter size={28} />
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" target="_blank" rel="noopener noreferrer" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaLinkedin size={28} />
                 </a>
               </li>
@@ -40,10 +41,10 @@ const AdainFooter = () => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-xl font-semibold mb-4">Learn More</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="hover:text-nexagreen transition-colors duration-200">Home</a></li>
-              <li><a href="/products" className="hover:text-nexagreen transition-colors duration-200">Projects</a></li>
-              <li><a href="/about" className="hover:text-nexagreen transition-colors duration-200">About Us</a></li>
-              <li><a href="/contact" className="hover:text-nexagreen transition-colors duration-200">Contact</a></li>
+              <li><Link href="/Home" className="hover:text-nexagreen transition-colors duration-200">Home</Link></li>
+              <li><Link href="/Projects" className="hover:text-nexagreen transition-colors duration-200">Projects</Link></li>
+              <li><Link href="/About" className="hover:text-nexagreen transition-colors duration-200">About Us</Link></li>
+              <li><Link href="/Contact" className="hover:text-nexagreen transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
 
@@ -53,7 +54,7 @@ const AdainFooter = () => {
             <p className="text-sm mb-4 max-w-xs">
               Subscribe to our newsletter to get our news & deals delivered to you.
             </p>
-            <form className="flex flex-col sm:flex-row gap-2 w-full max-w-xs">
+            <div className="flex flex-col sm:flex-row gap-2 w-full max-w-xs">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -61,19 +62,19 @@ const AdainFooter = () => {
                 required
               />
               <button
-                type="submit"
+                type="button"
                 className="px-4 py-2 bg-nexagreen hover:bg-green-700 text-white rounded font-semibold transition-colors duration-300"
               >
                 Subscribe
               </button>
-            </form>
+            </div>
           </div>
 
         </div>
 
         {/* Optional footer bottom bar */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} NexaDataEase. All rights reserved.
+          &copy; {new Date().getFullYear()} Nexatech. All rights reserved.
         </div>
       </div>
     </footer>

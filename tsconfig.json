@@ -17,6 +17,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/Home.js", "pages/_app.jsx", "tailwind.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.js", "pages/_app.jsx", "tailwind.config.js"],
   "exclude": ["node_modules"]
 }
