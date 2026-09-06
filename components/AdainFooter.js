@@ -1,84 +1,82 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
-// I created a footer for the app.
 const AdainFooter = () => {
   return (
-    // I used the footer element of html to wrapp all three divs i needed to make the footer.
-    <footer className='relative w-full sm:h-[300px] mt-5  bg-adainfooterblack text-adainwhite'>
-      <div className='md:container mx-auto px-10 flex flex-col md:flex-row md:justify-between md:items-center items-center'>
+    <footer className="w-full bg-nexablack text-nexawhite py-10 mt-5">
+      <div className="container mx-auto px-6 md:px-12">
+        {/* Grid layout: 3 columns on desktop, 1 column on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
 
-      <div className="mx-8 px-10 flex flex-col space-y-4 mb-6 md:mb-0 text-center"> {/* This is the first div to wrapp the Getin Touch */}
-      <div className='mb-5'>
-            <h1 className='text-lg font-mono font-semibold mt-10'>Social Links</h1>
-            
-            <ul className='flex flex-row justify-center gap-10 mt-4'>
-          <li className="hover:ml-[-10px] duration-300 text-adainyellow">
-            <a
-              href="https://www.facebook.com/profile.php?id=100091835923247"
-            >
-               <FaFacebook size={30} />
-            </a>
-          </li>
-          <li className="hover:ml-[-10px] duration-300 text-adainyellow">
-            <a
-              
-              href="https://www.instagram.com/quickmed_ng/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
-            >
-              <FaInstagram size={30} />
-            </a>
-          </li>
-          <li className="hover:ml-[-10px] duration-300 text-adainyellow">
-            <a
-              href="https://twitter.com/QuickmedNG?s=09"
-            >
-              <FaTwitter size={30} />
-            </a>
-          </li>
-          </ul>
-        </div>
-          <p className='mx-8'>First floor, Sky Blue Building beside Beam clinic, Along Aso B Mararaba Road, Nasarawa State</p>
-          <p className='mx-8'>info@adain.ng</p>
-        </div>
+          {/* Column 1: Social Links & Contact */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+            <ul className="flex gap-6 mb-4">
+              <li>
+                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                  <FaFacebook size={28} />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                  <FaInstagram size={28} />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                  <FaTwitter size={28} />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                  <FaLinkedin size={28} />
+                </a>
+              </li>
+            </ul>
+            <p className="text-sm mb-1">Along Aso B Mararaba Road, Nasarawa State</p>
+            <p className="text-sm">info@nexadataease.com</p>
+          </div>
 
-        <div className="mx-8 px-10  flex my-4 flex-col  md:w-1/2 text-center"> {/* This is the second div to wrapp the Learn More */}
-          <p className='mx-8 font-bold'>Learn More</p>
-          <a className='mx-8' href="#">Home</a>
-          <a className='mx-8' href="#">Products and Services</a>
-          <a className='mx-8' href="#">Job</a>
-          <a className='mx-8' href="#">About Us</a>
-          <a className='mx-8' href="#">Blog</a>
-          <a className='mx-8' href="#">Contact</a>
-        </div>
+          {/* Column 2: Quick Links */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <h3 className="text-xl font-semibold mb-4">Learn More</h3>
+            <ul className="space-y-2">
+              <li><a href="/" className="hover:text-nexagreen transition-colors duration-200">Home</a></li>
+              <li><a href="/products" className="hover:text-nexagreen transition-colors duration-200">Projects</a></li>
+              <li><a href="/about" className="hover:text-nexagreen transition-colors duration-200">About Us</a></li>
+              <li><a href="/contact" className="hover:text-nexagreen transition-colors duration-200">Contact</a></li>
+            </ul>
+          </div>
 
+          {/* Column 3: Newsletter */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
+            <p className="text-sm mb-4 max-w-xs">
+              Subscribe to our newsletter to get our news & deals delivered to you.
+            </p>
+            <form className="flex flex-col sm:flex-row gap-2 w-full max-w-xs">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 rounded bg-nexawhite text-nexablack placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-nexagreen"
+                required
+              />
+              <button
+                type="submit"
+                className="px-4 py-2 bg-nexagreen hover:bg-green-700 text-white rounded font-semibold transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
 
-        <div className="sm:mx-8 px-10 flex my-4 flex-col  md:w-1/2 text-center">{/* This is the third div to wrapp the Newsletter */}
-        <p className='mx-8 font-bold'>Newsletter</p>
-          <p className="mx-8 mb-4">Subscribe to our newsletter to get our news & deals delivered to you</p>
-          <form className="sm:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-1">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="mx-8 border border-adainyellow px-2 py-1 rounded w-full md:w-auto"
-            />
-            <button
-              type="submit"
-              className="mx-8 bg-adainyellow text-white px-4 py-2 rounded"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-
-
-
-        
         </div>
 
-       
-      
-        
+        {/* Optional footer bottom bar */}
+        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} NexaDataEase. All rights reserved.
+        </div>
+      </div>
     </footer>
-    
   );
 };
 
