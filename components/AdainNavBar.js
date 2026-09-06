@@ -85,63 +85,17 @@ function AdainNavBar() {
                   </li>
 
                   {/* Dropdown for Products & Services */}
-                  <li className="relative text-nexablack hover:text-nexawhite" ref={dropdownRef}>
-                    <button onClick={toggleDropdown} className="nav-link flex items-center">
-                      Projects
-                      <FaCaretDown className="ml-1" />
-                    </button>
-
-                    {isDropdownOpen && (
-                      <div className="absolute left-0 top-full mt-2 w-48 bg-nexawhite rounded-lg shadow-lg py-2 z-10">
-                        <Link 
-                          href="https://quickmed.ng" 
-                          className="block px-4 py-2 text-nexablack hover:bg-nexagreen hover:text-nexablack rounded-md"
-                          onClick={closeDropdown}
-                        >
-                          QuickMed
-                        </Link>
-                        <Link 
-                          href="https://www.space1unicorn.com/" 
-                          className="block px-4 py-2 text-nexablack hover:bg-nexagreen hover:text-nexablack rounded-md"
-                          onClick={closeDropdown}
-                        >
-                          Azare
-                        </Link>
-                        <Link 
-                          href="/geez-api-url" 
-                          className="block px-4 py-2 text-nexablack hover:bg-nexagreen hover:text-nexablack rounded-md"
-                          onClick={closeDropdown}
-                        >
-                          Geez
-                        </Link>
-                        <Link 
-                          href="/needle-api-url" 
-                          className="block px-4 py-2 text-nexablack hover:bg-nexagreen hover:text-nexablack rounded-md"
-                          onClick={closeDropdown}
-                        >
-                          Needle
-                        </Link>
-                      </div>
-                    )}
-                  </li>
+                
 
                   <li className={`text-nexablack hover:text-nexawhite ${activeNavItem === 'about' ? 'active' : ''}`}>
-                    <Link href="/About" onClick={() => handleClick('about')}>
+                    <Link href="/about" onClick={() => handleClick('about')}>
                       About Us
                     </Link>
                   </li>
-                  <li className={`text-nexablack hover:text-nexawhite ${activeNavItem === 'experiences' ? 'active' : ''}`}>
-                    <Link href="/Job" onClick={() => handleClick('experiences')}>
-                      Job
-                    </Link>
-                  </li>
-                  <li className={`text-nexablack hover:text-nexawhite ${activeNavItem === 'experiences' ? 'active' : ''}`}>
-                    <Link href="/Blog" onClick={() => handleClick('experiences')}>
-                      Blog
-                    </Link>
-                  </li>
+                 
+             
                   <li className={`text-nexablack hover:text-nexawhite pr-20 ${activeNavItem === 'experiences' ? 'active' : ''}`}>
-                    <Link href="/Contact" onClick={() => handleClick('experiences')}>
+                    <Link href="/contact" onClick={() => handleClick('experiences')}>
                       Contact
                     </Link>
                   </li>

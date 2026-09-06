@@ -1,49 +1,33 @@
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
-
-function NightMode(){
-    const{theme, setTheme} = useTheme()
+function NightMode() {
+  const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Avoids a hydration mismatch — theme is only known on the client.
   useEffect(() => {
     setMounted(true);
   }, []);
+
   if (!mounted) return null;
+
   const currentTheme = theme === 'system' ? systemTheme : theme;
+  const isDark = currentTheme === 'dark';
 
-
-    return(
-        <div className="flex justify-center">
-      <div>
-        <h1>
-          {currentTheme === 'dark' ? 'Dark' : 'Light'}{' '}
-          <span>Mode</span>
-          </h1>
-        <div className="flex justify-center">
-          {currentTheme === 'dark' ? (
-            <button
-              className="bg-black-700 hover:bg-black w-28 rounded-md border-purple-400 border-2 p-4"
-              onClick={() => setTheme('light')}
-            >
-              {' '}
-              <Image src="/images/sun.svg" alt="logo" height={50} width={50} />
-            </button>
-          ) : (
-            <button
-              className="bg-gray-100 w-20 rounded-md border-purple-400 border-2 p-4 hover:bg-gray-300"
-              onClick={() => setTheme('dark')}
-            >
-              <Image src="/images/moon.svg" alt="logo" height={50} width={50} />
-            </button>
-          )}
-        </div>
-      </div>
-    </div>
-
-    )
-
+  return (
+    <button
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-nexagreen text-nexagreen hover:bg-nexablack hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-nexagreen"
+    >
+      {isDark ? <FaSun size={18} /> : <FaMoon size={18} />}
+      <span className="font-popins text-sm font-medium">
+        {isDark ? 'Light' : 'Dark'} mode
+      </span>
+    </button>
+  );
 }
 
-export default NightMode
+export default NightMode;

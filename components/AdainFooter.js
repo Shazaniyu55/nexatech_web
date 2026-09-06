@@ -12,22 +12,22 @@ const AdainFooter = () => {
             <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
             <ul className="flex gap-6 mb-4">
               <li>
-                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaFacebook size={28} />
                 </a>
               </li>
               <li>
-                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaInstagram size={28} />
                 </a>
               </li>
               <li>
-                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaTwitter size={28} />
                 </a>
               </li>
               <li>
-                <a href="#" className="text-nexagreen hover:text-white transition-colors duration-300">
+                <a href="https://www.facebook.com/shazaniyu.gbadamosi.2025" className="text-nexagreen hover:text-white transition-colors duration-300">
                   <FaLinkedin size={28} />
                 </a>
               </li>
