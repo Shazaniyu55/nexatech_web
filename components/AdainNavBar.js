@@ -48,9 +48,7 @@ function AdainNavBar() {
         <div className="justify-between px-4 mx-auto lg:max-w-8xl md:items-center md:flex sm:px-8">
           <div className={`mt-top-adjusted ${navbar ? 'adjust-down' : ''}`}>
             <div className="flex text-adainblack hover:text-adainwhite items-center justify-between py-5">
-              <a href="/" className="flex items-center">
                 <Image src="/images/logo.png" width={100} height={100} alt="Avista Beach Resort Logo" />
-              </a>
               <div className="md:hidden text-nexablack hover:text-nexawhite">
                 <button className="text-nexablack hover:text-nexawhite pt-2 rounded-md" onClick={handleClick}>
                   {navbar ? (
