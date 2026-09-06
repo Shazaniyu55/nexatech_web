@@ -41,10 +41,9 @@ const AdainFooter = () => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-xl font-semibold mb-4">Learn More</h3>
             <ul className="space-y-2">
-              <li><Link href="/Home" className="hover:text-nexagreen transition-colors duration-200">Home</Link></li>
-              <li><Link href="/Projects" className="hover:text-nexagreen transition-colors duration-200">Projects</Link></li>
-              <li><Link href="/About" className="hover:text-nexagreen transition-colors duration-200">About Us</Link></li>
-              <li><Link href="/Contact" className="hover:text-nexagreen transition-colors duration-200">Contact</Link></li>
+              <li><Link href="/" className="hover:text-nexagreen transition-colors duration-200">Home</Link></li>
+              <li><Link href="/about" className="hover:text-nexagreen transition-colors duration-200">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-nexagreen transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
 
